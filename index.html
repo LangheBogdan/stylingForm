@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Advance Form Styling</title>
+  </head>
+  <body>
+    <h1 class="title">Advance Form Styling</h1>
+    <form action="/submit" method="post" autocomplete="on">
+      <div class="form-group flex-group"></div>
+      <label for="title">Title(required)</label>
+      <select name="title" id="title" required aria-required="true">
+        <option value="">-Please choose an option-</option>
+        <option value="MR">MR.</option>
+        <option value="MRS">MRS.</option>
+        <option value="MS">MS.</option>
+      </select>
+      <label for="family_name">Family Name(required)</label>
+      <input
+        class="input-text"
+        type="text"
+        name="family_name"
+        id="family_name"
+        required
+        aria-required="true"
+        inputmode="text"
+        autocomplete="family-name"
+      />
+      <label for="first_name">First Name(required)</label>
+      <input
+        class="input-text"
+        type="text"
+        name="first_name"
+        id="first_name"
+        required
+        aria-required="true"
+      />
+      <div class="form-group">
+        <label for="institution">Institution(required)</label>
+        <input
+          class="input-text"
+          type="text"
+          name="institution"
+          id="institution"
+          required
+          aria-required="true"
+        />
+      </div>
+      <div class="form-group flex-group">
+        <label for="address">Address(optional)</label>
+        <input
+          class="input-text"
+          type="text"
+          name="address"
+          id="address"
+          aria-required="false"
+        />
+        <label for="postal-code">Postal/Zip Code(optional)</label>
+        <input
+          class="input-text"
+          type="text"
+          name="postal-code"
+          id="postal-code"
+          aria-required="false"
+        />
+      </div>
+      <div class="form-group flex-group">
+        <label for="city">City(required)</label>
+        <input
+          class="input-text"
+          type="text"
+          name="city"
+          id="city"
+          required
+          aria-required="true"
+        />
+        <label for="country">Country(required)</label>
+        <input
+          class="input-text"
+          type="text"
+          name="country"
+          id="country"
+          required
+          aria-required="true"
+        />
+      </div>
+      <div class="form-group flex-group">
+        <label for="telephone">Telephone</label>
+        <input type="tel" name="telephone" id="telephone" placeholder="+40" />
+        <label for="email">Email(required)</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          aria-required="true"
+        />
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Roboto&display=swap");
+
+/*Basic Reset Css*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+:root {
+  --text-font-family: "Cabin";
+  --title-font-family: "Roboto";
+  --input-border: #8b8a8b;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
+body {
+  color: #333;
+  font-family: var(--text-font-family), sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font-family), sans-serif;
+  margin: 0;
+}
+/* Layout */
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  background-color: aqua;
+  max-width: 72rem;
+}
+
+.input-text {
+  font-size: max(16px, 1.6rem);
+  font-family: inherit;
+  padding: 0.25rem 0.5rem;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 0.4rem;
+  line-height: 1;
+  height: 2.25rem;
+  transition: 180ms box-shadow ease-in-out;
+}
+
+.input-text[disabled] {
+  --input-border: #ccc;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.input-text:focus {
+  border-color: hsl(
+    var(--input-focus-h),
+    var(--input-focus-s),
+    var(--input-focus-l)
+  );
+  box-shadow: 0 0 0 3px
+    hsla(
+      var(--input-focus-h),
+      var(--input-focus-s),
+      calc(var(--input-focus-l) + 40%),
+      0.8
+    );
+  outline: 3px solid transparent;
+}
